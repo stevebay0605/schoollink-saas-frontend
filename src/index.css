@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@import '@blinkdotnew/ui/styles';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+  }
+}
+
+:root {
+  /* SchoolLink — Palette Verte Institutionnelle */
+  --background: 210 40% 98%;
+  --foreground: 215 25% 18%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 18%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 25% 18%;
+
+  /* Vert école #1a6b3c */
+  --primary: 148 60% 26%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Or #c9a82c */
+  --secondary: 43 64% 48%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 210 20% 95%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 148 45% 92%;
+  --accent-foreground: 148 60% 20%;
+
+  --destructive: 0 72% 59%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 20% 89%;
+  --input: 214 20% 89%;
+  --ring: 148 60% 26%;
+
+  /* Charts SchoolLink */
+  --chart-1: 148 60% 26%;
+  --chart-2: 43 64% 48%;
+  --chart-3: 210 100% 50%;
+  --chart-4: 0 72% 59%;
+  --chart-5: 38 92% 50%;
+
+  /* Sidebar verte */
+  --sidebar: 148 55% 18%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 43 64% 55%;
+  --sidebar-primary-foreground: 0 0% 5%;
+  --sidebar-accent: 148 40% 25%;
+  --sidebar-accent-foreground: 0 0% 90%;
+  --sidebar-border: 148 30% 22%;
+  --sidebar-ring: 43 64% 55%;
+
+  /* Fonts */
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.06);
+  --shadow-card: 0 2px 8px 0 rgb(0 0 0 / 0.06);
+
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-heading: 1.2;
+  --tracking-normal: 0em;
+
+  /* Misc */
+  --spacing: 0.25rem;
+}
+
+:root.dark,
+.theme-linear.dark,
+.theme-glass.dark,
+.theme-midnight.dark,
+.theme-minimal.dark {
+  --background: 215 30% 10%;
+  --foreground: 210 20% 88%;
+
+  --card: 215 25% 14%;
+  --card-foreground: 210 20% 88%;
+
+  --popover: 215 25% 14%;
+  --popover-foreground: 210 20% 88%;
+
+  --primary: 148 50% 42%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 43 55% 55%;
+  --secondary-foreground: 0 0% 5%;
+
+  --muted: 215 20% 18%;
+  --muted-foreground: 215 15% 55%;
+
+  --accent: 148 30% 20%;
+  --accent-foreground: 148 50% 75%;
+
+  --destructive: 0 65% 55%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 20% 22%;
+  --input: 215 20% 22%;
+  --ring: 148 50% 42%;
+
+  --chart-1: 148 50% 42%;
+  --chart-2: 43 55% 55%;
+  --chart-3: 210 80% 60%;
+  --chart-4: 0 65% 60%;
+  --chart-5: 38 80% 55%;
+
+  --sidebar: 215 30% 8%;
+  --sidebar-foreground: 0 0% 90%;
+  --sidebar-primary: 43 55% 60%;
+  --sidebar-primary-foreground: 0 0% 5%;
+  --sidebar-accent: 215 25% 14%;
+  --sidebar-accent-foreground: 0 0% 85%;
+  --sidebar-border: 215 20% 15%;
+  --sidebar-ring: 43 55% 60%;
+}
+
+/* Animations globales */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
